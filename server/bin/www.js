@@ -1,10 +1,5 @@
-#!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
-
-var app = require('../app');
+import app from '../app';
 var debug = require('debug')('pro-sav:server');
 var http = require('http');
 
