@@ -1,2 +1,0 @@
-{"message":"Hello, Winston logger a warning!","level":"warn"}
-{"message":"Hello, Winston logged an error!","level":"error"}
