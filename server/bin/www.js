@@ -8,6 +8,7 @@ import app from '@s/app';
 
 import Debug from 'debug';
 import http from 'http';
+import winston from 'winston';
 
 // eslint-disable-next-line no-unused-vars
 const debug = Debug('pro-sav:server');
@@ -59,11 +60,11 @@ function onError(error) {
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
-      console.error(`${bind}requires elevated privileges`);
+      winston.error(`${bind}requires elevated privileges`);
       process.exit(1);
       break;
     case 'EADDRINUSE':
-      console.error(`${bind} is already in use`);
+      winston.error(`${bind} is already in use`);
       process.exit(1);
       break;
     default:
@@ -79,5 +80,6 @@ function onListening() {
   const addr = server.address();
   // eslint-disable-next-line no-unused-vars
   const bind = typeof addr === 'string' ? `pipe ${addr}` : `port  ${addr.port}`;
-  console.log(`Escuchando en puerto ${port}`);
+  debug(`Listening on ${bind}`);
+  winston.info(`Escuchando en puerto ${app.get('port')}`);
 }
