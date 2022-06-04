@@ -1,11 +1,16 @@
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-shadow */
+/* eslint-disable no-console */
+/* eslint-disable no-use-before-define */
+/* eslint-disable import/no-unresolved */
 // importando instancias
 import app from '@s/app';
 
 import Debug from 'debug';
 import http from 'http';
 
-
-const debug = Debug("pro-sav:server");
+// eslint-disable-next-line no-unused-vars
+const debug = Debug('pro-sav:server');
 
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
@@ -49,9 +54,7 @@ function onError(error) {
     throw error;
   }
 
-  var bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
+  const bind = typeof port === 'string' ? `Pipe ${port}` : `Port ${port}`;
 
   // handle specific listen errors with friendly messages
   switch (error.code) {
@@ -74,9 +77,7 @@ function onError(error) {
 
 function onListening() {
   const addr = server.address();
-  const bind = typeof addr === 
-  'string' ? 
-  `pipe ${addr}` : 
-  `port  ${addr.port}`;
-  console.log(`Escuchando en puerto ${port}`)
+  // eslint-disable-next-line no-unused-vars
+  const bind = typeof addr === 'string' ? `pipe ${addr}` : `port  ${addr.port}`;
+  console.log(`Escuchando en puerto ${port}`);
 }

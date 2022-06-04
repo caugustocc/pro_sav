@@ -9,7 +9,8 @@
     "client:server": "SET NODE_ENV=development && webpack server --config ./webpack.config.js --mode development",
     "clean": "rimraf dist",
     "build:s": "npm run clean && babel ./server --out-dir dist --copy-files",
-    "lint-server": "eslint ./server"
+    "lint-server": "eslint ./server",
+    "clearlogs":"rimraf ./server/logs/*.log" 
   },
   "dependencies": {
     "app-root-path": "^3.0.0",
