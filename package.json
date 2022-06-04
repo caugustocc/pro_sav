@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./server/bin/www.js",
-    "dev": "babel-watch ./server/bin/www.js",
+    "start": "node ./server/bin/www",
+    "dev": "babel-watch ./server/bin/www",
     "client:server":"SET NODE_ENV=development && webpack serve --config ./webpack.config.js --mode development",
     "clean":"rimraf dist",
     "build:s":"npm run clean && babel ./server --out-dir dist --copy-files"
