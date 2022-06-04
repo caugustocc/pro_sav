@@ -1,11 +1,8 @@
-
+// importando instancias
 import app from '../app';
 import Debug from 'debug';
 import http from 'http';
 
-/**
- * Get port from environment and store in Express.
- */
 
 const debug = Debug("pro-sav:server");
 
@@ -16,7 +13,7 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+const server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -45,11 +42,7 @@ function normalizePort(val) {
 
   return false;
 }
-
-/**
- * Event listener for HTTP server "error" event.
- */
-
+// evento ERROR
 function onError(error) {
   if (error.syscall !== 'listen') {
     throw error;
