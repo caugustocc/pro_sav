@@ -12,21 +12,21 @@ import usersRouter from './routes/users';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import WebpackHotMiddleware from 'webpack-hot-middleware';
-import webpackConfig from '../webpack.dev.config'
+import webpackConfig from '../webpack.dev.config';
 
 
 const app = express();
 
 //Recuperar el modo de ejecucion
 const nodeEnv = process.env.NONE_ENV ||'development';
-console.log(`< 🍕 > nodeEnv: ${nodeEnv}`)
+console.log(`< 🛩 > nodeEnv: ${nodeEnv}`)
 // Decidiendo si embebemos el webpack mideleware
 if(nodeEnv === 'development'){
   // Embebiendo webpck a mi apliacion
-  console.log('ejecutando en mdo desarrollo 🤡');
+  console.log('Ejecutando en mdo desarrollo 🚧');
   // Establecioendo el modo de webpack en desarrollo
   // en el configurador
-  webpackConfig.mode = "development";
+  webpackConfig.mode = 'development';
   // Confirgurando la ruta del HMR 
   // reload=true : Habilita la recarga automatica cuando un archivo JS cambia
   // timeout=1000: Tiempo de refresco de la pagina

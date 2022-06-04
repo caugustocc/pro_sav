@@ -11,13 +11,13 @@ show();
 function resolveAfter2Seconds(){
     return new Promise ((resolve) =>{
         setTimeout(()=>{
-            resolve("functio resolve")  
-        },2000)
-    })
+            resolve('functio resolve');  
+        },2000);
+    });
 }
 
 async function asyncCall(){
-    console.log("calling asyn funtion!!!");
+    console.log('calling asyn funtion!!!');
     const result = await resolveAfter2Seconds();
     console.log(result);//imprime "funcion resolve" en la consola
 }
