@@ -1,5 +1,6 @@
 // importando instancias
-import app from '../app';
+import app from '@s/app';
+
 import Debug from 'debug';
 import http from 'http';
 
