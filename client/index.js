@@ -1,5 +1,7 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-console */
+import './styles/mystyle.css';
+
 console.log('SANTA ANA DEL VALLE💫');
 // default parameters
 const show = (m = 'holis☠') => {
