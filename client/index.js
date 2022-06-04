@@ -1,6 +1,6 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-console */
-console.log('webpack💫');
+console.log('SANTA ANA DEL VALLE💫');
 // default parameters
 const show = (m = 'holis☠') => {
   alert(m);

@@ -5,13 +5,13 @@ import express from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
-import winston from './config/winston';
 
 // rutas
 
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import WebpackHotMiddleware from 'webpack-hot-middleware';
+import winston from './config/winston';
 import usersRouter from './routes/users';
 import indexRouter from './routes/index';
 import webpackConfig from '../webpack.dev.config';
@@ -69,11 +69,13 @@ app.use((req, res, next) => {
 });
 
 // error handler
-app.use((err, req, res, _) => {
+app.use((err, req, res) => {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
+  // Registramos el error en winston
+  winston.error(`${err.status || 500} : ${err.message} : 
+   ${req.method} ${req.originalUrl}: IP ${req.ip}`);
   // render the error page
   res.status(err.status || 500);
   res.render('error');
