@@ -20,7 +20,7 @@ import webpackConfig from '../webpack.dev.config';
 const app = express();
 
 // Recuperar el modo de ejecucion
-const nodeEnv = process.env.NONE_ENV || 'development';
+const nodeEnv = process.env.NODE_ENV || 'development';
 console.log(`< 🛩 > nodeEnv: ${nodeEnv}`);
 // Decidiendo si embebemos el webpack mideleware
 if (nodeEnv === 'development') {
@@ -64,6 +64,9 @@ router.addRoutes(app);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
+  winston.error(
+    `404 - Not Found: ${req.method} ${req.originalUrl}: IP ${req.ip}`
+  );
   next(createError(404));
 });
 

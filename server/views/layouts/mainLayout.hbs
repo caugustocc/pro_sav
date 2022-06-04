@@ -2,14 +2,24 @@
 <html>
   <head>
     <title>{{title}}</title>
-    <link rel="shortcut icon" href="/images/SCara.ico">
-     {{!-- importando normalize --}}
+     <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Cargando Materializecss --->
     <link rel='stylesheet' href='/vendor/materializecss/css/materialize.min.css' />
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Cargando Materializecss --->
+    <link rel='stylesheet' href='/stylesheets/styles.css' />
   </head>
   <body>
-    {{{body}}}
+    {{!-- Lllamando a la vista parcial de la navbar --}}
+    {{> _navbar}}
+    <div class="container">
+      {{{body}}}
+    </div>
+   <!-- Materialize script -->
     <script src="/vendor/materializecss/js/materialize.min.js"></script>
-    <script src="/javascripts/budle.js"></script>
+    <!-- Bundle de la App -->
+    <script src="/javascripts/bundle.js"></script>
   </body>
 </html>

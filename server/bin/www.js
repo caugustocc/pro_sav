@@ -8,12 +8,13 @@ import app from '@s/app';
 
 import Debug from 'debug';
 import http from 'http';
-import winston from 'winston';
+import winston from '../config/winston';
+import configKeys from '../config/configKeys';
 
 // eslint-disable-next-line no-unused-vars
 const debug = Debug('pro-sav:server');
 
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(configKeys.port || '3000');
 app.set('port', port);
 
 /**
@@ -37,7 +38,7 @@ server.on('listening', onListening);
 function normalizePort(val) {
   const port = parseInt(val, 10);
 
-  if (isNaN(port)) {
+  if (Number.isNaN(port)) {
     // named pipe
     return val;
   }
