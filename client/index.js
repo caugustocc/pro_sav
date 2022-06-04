@@ -1,4 +1,5 @@
-/* eslint-disable no-console */
+/* eslint-disable*/
+/* eslint-disable no console */
 console.log("webpack💫");
 // default parameters
 let show = (m ="holis☠")=>{
