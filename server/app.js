@@ -11,6 +11,8 @@ import morgan from 'morgan';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import WebpackHotMiddleware from 'webpack-hot-middleware';
+import templateEngineConf from './config/templateEngine';
+
 import winston from './config/winston';
 import usersRouter from './routes/users';
 import indexRouter from './routes/index';
@@ -51,8 +53,7 @@ if (nodeEnv === 'development') {
   console.log('ejecutando en mdo produccion ⚠');
 }
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+templateEngineConf(app);
 
 app.use(morgan('combined', { stream: winston.stream }));
 app.use(express.json());
