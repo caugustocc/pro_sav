@@ -12,10 +12,9 @@ import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import WebpackHotMiddleware from 'webpack-hot-middleware';
 import templateEngineConf from './config/templateEngine';
+import router from './routes/router';
 
 import winston from './config/winston';
-import usersRouter from './routes/users';
-import indexRouter from './routes/index';
 import webpackConfig from '../webpack.dev.config';
 
 const app = express();
@@ -61,8 +60,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+router.addRoutes(app);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
