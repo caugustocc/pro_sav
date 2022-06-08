@@ -11,3 +11,6 @@
 {"level":"error","message":"404 - Not Found: GET /images/favicon.ico: IP ::1","timestamp":"04-06-2022 14:47:21"}
 {"level":"error","message":"Sin conexiom con la conexion devido a: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string. \ud83d\udc80","timestamp":"07-06-2022 23:09:22"}
 {"level":"error","message":"☠ Error sin conexion 🚫","timestamp":"07-06-2022 23:09:22"}
+{"level":"error","message":"404 - Not Found: GET /images/favicon.ico: IP ::1","timestamp":"07-06-2022 23:55:37"}
+{"level":"error","message":"404 - Not Found: GET /https: IP ::1","timestamp":"08-06-2022 00:11:51"}
+{"level":"error","message":"404 - Not Found: GET /favicon.ico: IP ::1","timestamp":"08-06-2022 00:11:52"}

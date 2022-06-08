@@ -1,3 +1,4 @@
+/* global M */
 import './styles/mystyle.css';
 
 /* Inicializando elementos de materializecss */
@@ -7,4 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const sideNavs = document.querySelectorAll('.sidenav');
   // eslint-disable-next-line no-undef
   M.Sidenav.init(sideNavs);
+
+  const dropdowns = document.querySelectorAll('.dropdown-tigger');
+  M.Dropdown.init(dropdowns);
 });
