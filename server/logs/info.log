@@ -105,3 +105,10 @@
 {"level":"info","message":"::1 - - [04/Jun/2022:19:47:23 +0000] \"GET / HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36 Edg/102.0.1245.30\"\n","timestamp":"04-06-2022 14:47:23"}
 {"level":"info","message":"::1 - - [04/Jun/2022:19:47:23 +0000] \"GET /vendor/materializecss/css/materialize.min.css HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36 Edg/102.0.1245.30\"\n","timestamp":"04-06-2022 14:47:23"}
 {"level":"info","message":"::1 - - [04/Jun/2022:19:47:23 +0000] \"GET /vendor/materializecss/js/materialize.min.js HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36 Edg/102.0.1245.30\"\n","timestamp":"04-06-2022 14:47:23"}
+{"level":"info","message":"conectado a la base de datos: undefined","timestamp":"07-06-2022 23:09:22"}
+{"level":"info","message":"Escuchando en puerto 3000","timestamp":"07-06-2022 23:09:22"}
+{"level":"error","message":"Sin conexiom con la conexion devido a: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string. \ud83d\udc80","timestamp":"07-06-2022 23:09:22"}
+{"level":"error","message":"☠ Error sin conexion 🚫","timestamp":"07-06-2022 23:09:22"}
+{"level":"info","message":"conectado a la base de datos: mongodb://localhost:27017/prjnotes_dev_class","timestamp":"07-06-2022 23:16:41"}
+{"level":"info","message":"Escuchando en puerto 3000","timestamp":"07-06-2022 23:16:41"}
+{"level":"info","message":"Conexion exitosa con la base Datos ✅","timestamp":"07-06-2022 23:16:41"}

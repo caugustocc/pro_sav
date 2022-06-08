@@ -4,6 +4,9 @@ public/semantic
 # Logs
 logs
 *.log
+server/logs/error.log
+server/logs/info.log
+server/logs/warn.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

@@ -16,6 +16,8 @@ import router from './routes/router';
 
 import winston from './config/winston';
 import webpackConfig from '../webpack.dev.config';
+import configKeys from './config/configKeys';
+import MongooseODM from './config/odm';
 
 const app = express();
 
@@ -26,12 +28,7 @@ console.log(`< 🛩 > nodeEnv: ${nodeEnv}`);
 if (nodeEnv === 'development') {
   // Embebiendo webpck a mi apliacion
   console.log('Ejecutando en mdo desarrollo 🚧');
-  // Establecioendo el modo de webpack en desarrollo
-  // en el configurador
   webpackConfig.mode = 'development';
-  // Confirgurando la ruta del HMR
-  // reload=true : Habilita la recarga automatica cuando un archivo JS cambia
-  // timeout=1000: Tiempo de refresco de la pagina
   webpackConfig.entry = [
     'webpack-hot-middleware/client?reload=true&timeout=1000',
     webpackConfig.entry,
@@ -51,7 +48,15 @@ if (nodeEnv === 'development') {
 } else {
   console.log('ejecutando en mdo produccion ⚠');
 }
-
+const mongooseODM = new MongooseODM(configKeys.databaseUrl);
+(async () => {
+  const connectionResult = await mongooseODM.connect();
+  if (connectionResult) {
+    winston.info('Conexion exitosa con la base Datos ✅');
+  } else {
+    winston.error('☠ Error sin conexion 🚫');
+  }
+})();
 templateEngineConf(app);
 
 app.use(morgan('combined', { stream: winston.stream }));
