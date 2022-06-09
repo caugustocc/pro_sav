@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="col s12 m10 offset-m1 l8 offset-l2">
+    <div class="card">
+      <div class="card-image">
+        <img src="/images/SCara.ico" style="max-width:500px ;" alt="Icono SAV" />
+        <span class="card-title" style="color: blac ;">
+          Registrarse
+        </span>
+      </div>
+      <form autocomplete="off" action="/projects/add" method="POST">
+        <div class="card-content">
+          <div class="input-field">
+            <label for="name-user">
+              Nombre
+            </label>
+            <input
+              placeholder="Ingrese el nombre completo"
+              type="text"
+              id="name-user"
+              name="name"
+              class="validate"
+            />
+          </div>
+          <div class="input-field">
+            <label for="curp-user">
+              CURP
+            </label>
+            <input
+              placeholder="Ingrese CURP"
+              type="text"
+              name="curp-user"
+              id="curp-user"
+              class="validate"
+            ></input>
+          </div>
+          <div class="input-field">
+            <label for="email-user">
+              Correo electronico
+            </label>
+            <input
+              placeholder="correo@correo.com"
+              type="email"
+              id="email"
+              name="email-user"
+              class="validate"
+            />
+          </div>
+        </div>
+        <div class="card-action">
+          <button
+            type="submit"
+            class="blue darken-3 waves-effect waves-light btn"
+          >
+            <i class="material-icons left">
+              save
+            </i>
+            Registrar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
